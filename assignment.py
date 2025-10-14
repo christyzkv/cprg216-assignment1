@@ -22,3 +22,7 @@ while user_response == 'y':
         user_response = input("Would you like to add another student? y(yes), n(no): ")
 
         #hi guys can u guys see this
+        x=3
+        y=2
+        z=1
+        print(z,y,z)
