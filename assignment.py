@@ -25,4 +25,4 @@ while user_response == 'y':
         x=3
         y=2
         z=1
-        print(z,y,z)
+        print("Hi guys!")
