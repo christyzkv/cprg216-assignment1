@@ -1,11 +1,11 @@
 print("Welcome to the Grade Registry Program")
 students=[]
 user_response = input("Would you like to add a new student? y(yes), n(no)").lower()
-while user_response not in ('yes','no', 'n','y'):
-            print("Invalid input. Please type 'y' or 'n'.")
+while user_response not in ('yes','no','n','y'):
+            print("Incorrect input. Please type 'y' or 'n'.")
             user_response = input("Would you like to add another student? y(yes), n(no): ").lower()
-while user_response == ('yes'or 'y' or 'no' or 'n'):
-        if user_response == ('yes' or 'y'):
+while user_response in ('yes', 'y'):
+        if user_response in ('yes' , 'y'):
             student_name = input("Enter the student's name:")
             print("Enter student GPA for each subject. Enter -1 to stop entering GPA.")
             count = 0
@@ -15,14 +15,19 @@ while user_response == ('yes'or 'y' or 'no' or 'n'):
                 total+=gpa
                 count+=1
                 gpa=float(input())
-            if count >0:
-                student_gpa=(total/count)
-                students.append((student_name, student_gpa))
+            if count == 0:
+                student_gpa = 0
+            elif count >0:
+                student_gpa= round(total/count, 2)
+            students.append((student_name, student_gpa))  
         user_response = input("Would you like to add another student? y(yes), n(no): ").lower()
         while user_response not in ('yes','no','n','y'):
-            print("Invalid input. Please type 'y' or 'n'.")
+            print("Incorrect input. Please type 'y' or 'n'.")
             user_response = input("Would you like to add another student? y(yes), n(no): ").lower()
 print("This is the list of students in the system, and their corresponding accumulative GPA")
 for student in students:
       student_name, student_gpa = student
-      print(student_name,student_gpa)
+      if student_gpa == int(student_gpa):
+            print (f"{student_name} {int(student_gpa)}")
+      else:
+            print (f"{student_name} {student_gpa}")
