@@ -2,7 +2,7 @@ print("Welcome to the Grade Registry Program")
 students=[]
 user_response = input("Would you like to add a new student? y(yes), n(no)").lower()
 while user_response not in ('yes','no','n','y'):
-            print("Incorrect input. Please type 'y' or 'n'.")
+            print("Incorrect input, please type 'y' or 'n'.")
             user_response = input("Would you like to add another student? y(yes), n(no): ").lower()
 while user_response in ('yes', 'y'):
         if user_response in ('yes' , 'y'):
@@ -20,10 +20,10 @@ while user_response in ('yes', 'y'):
             elif count >0:
                 student_gpa= round(total/count, 2)
             students.append((student_name, student_gpa))  
-        user_response = input("Would you like to add another student? y(yes), n(no): ").lower()
+        user_response = input("Would you like to add another student? y(yes), n(no)").lower()
         while user_response not in ('yes','no','n','y'):
-            print("Incorrect input. Please type 'y' or 'n'.")
-            user_response = input("Would you like to add another student? y(yes), n(no): ").lower()
+            print("Incorrect input, please type 'y' or 'n'.")
+            user_response = input("Would you like to add another student? y(yes), n(no) ").lower()
 print("This is the list of students in the system, and their corresponding accumulative GPA")
 for student in students:
       student_name, student_gpa = student
