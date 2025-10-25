@@ -37,13 +37,14 @@ while user_response in ('yes', 'y'):
             print()
         if user_response in ('no','n'):
               break
-print("This is the list of students in the system, and their corresponding accumulative GPA")
-print()
-for student_name, gpa_list in students.items():
-      student_gpa = gpa_list[0]
-      if student_gpa == int(student_gpa):
-            print (f"{student_name} {int(student_gpa)}"'\n')
-      elif (student_gpa * 10) % 1 == 0:
-            print(f"{student_name} {student_gpa:.1f}\n")
-      else:
-            print (f"{student_name} {student_gpa:.2f}"'\n')
+if user_response in ('no', 'n'):
+    print("This is the list of students in the system, and their corresponding accumulative GPA")
+    print()
+    for student_name, gpa_list in students.items():
+        student_gpa = gpa_list[0]
+        if student_gpa == int(student_gpa):
+                print (f"{student_name} {int(student_gpa)}"'\n')
+        elif (student_gpa * 10) % 1 == 0:
+                print(f"{student_name} {student_gpa:.1f}\n")
+        else:
+                print (f"{student_name} {student_gpa:.2f}"'\n')
