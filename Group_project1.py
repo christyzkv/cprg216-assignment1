@@ -23,12 +23,12 @@ while user_response in ('yes', 'y'):
                 total+=gpa
                 count+=1
                 gpa=float(input())
-                if gpa == -1:
-                      print()
             if count == 0:
                 student_gpa = 0
             else:
                 student_gpa= (total/count)
+            if gpa == -1:
+                      print()
             students[student_name] = [student_gpa] 
         user_response = input("Would you like to add another student? y(yes), n(no)\n\n").lower()
         print()
@@ -44,5 +44,7 @@ for student_name, gpa_list in students.items():
       student_gpa = gpa_list[0]
       if student_gpa == int(student_gpa):
             print (f"{student_name} {int(student_gpa)}"'\n')
+      elif (student_gpa * 10) % 1 == 0:
+            print(f"{student_name} {student_gpa:.1f}\n")
       else:
             print (f"{student_name} {student_gpa:.2f}"'\n')
