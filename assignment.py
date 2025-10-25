@@ -7,13 +7,13 @@ while user_response not in ('yes','no','n','y'):
 while user_response in ('yes', 'y'):
         if user_response in ('yes' , 'y'):
             student_name = input("Enter the student's name:")
-            print("Enter student GPA for each subject. Enter -1 to stop entering GPA.")
+            print("Enter student GPA for each subject. Enter -1 to stop entering GPA.", '\n')
             count = 0
             total = 0 
             gpa = float(input())
             while gpa != -1:
                 if gpa < 0 or gpa > 4.0:
-                    print("Invalid GPA, please enter a GPA between 0.0 and 4.0 or -1 to stop.")
+                    print("Invalid GPA, please enter a GPA between 0.0 and 4.0 or -1 to stop.", '\n')
                     gpa = float(input())
                     continue
                 total+=gpa
@@ -24,7 +24,7 @@ while user_response in ('yes', 'y'):
             elif count >0:
                 student_gpa= round(total/count, 2)
             students.append((student_name, student_gpa))  
-            user_response = input("Would you like to check your entries? y(yes), n(no)").lower()
+            user_response = input("Would you like to check your entries? y(yes), n(no)", '\n').lower()
             if user_response in ('yes', 'y'):
                 for student in students:
                     student_name, student_gpa = student
