@@ -4,9 +4,8 @@ user_response = input("Would you like to add a new student? y(yes), n(no)\n\n").
 print()
 while user_response not in ('yes','no','n','y'):
             print("Incorrect input, please type 'y' or 'n'." '\n')
-            user_response = input("Would you like to add another student? y(yes), n(no): \n").lower()
+            user_response = input("Would you like to add another student? y(yes), n(no):\n\n").lower()
             print()
-
 while user_response in ('yes', 'y'):
         if user_response in ('yes' , 'y'):
             student_name = input("Enter the student's name:\n\n")
@@ -34,7 +33,7 @@ while user_response in ('yes', 'y'):
         print()
         while user_response not in ('yes','no','n','y'):
             print("Incorrect input, please enter y(yes)/n(no)."'\n')
-            user_response = input("Would you like to add another student? y(yes), n(no)\n\n ").lower()
+            user_response = input("Would you like to add another student? y(yes), n(no)\n\n").lower()
             print()
         if user_response in ('no','n'):
               break
