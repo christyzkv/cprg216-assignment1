@@ -4,7 +4,7 @@ user_response = input("Would you like to add a new student? y(yes), n(no)\n\n").
 print()
  
 while user_response not in ('yes', 'no', 'n', 'y'):
-    print("Incorrect input, please type 'y' or 'n'."'\n')
+    print("Incorrect input, please type 'y' or 'n'.\n")
     user_response = input("Would you like to add another student? y(yes), n(no):\n\n").lower()
     print()
  
