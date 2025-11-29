@@ -35,8 +35,6 @@ while user_response in ('yes', 'y'):
             print("Incorrect input, please enter y(yes)/n(no)."'\n')
             user_response = input("Would you like to add another student? y(yes), n(no)\n\n").lower()
             print()
-        if user_response in ('no','n'):
-              break
 if user_response in ('no', 'n'):
     print("This is the list of students in the system, and their corresponding accumulative GPA")
     print()
